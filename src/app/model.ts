@@ -10,3 +10,20 @@ export interface City {
     density: number;
     timezone: string;
 }
+
+export interface State {
+    admissionNumber: number;
+    name: string;
+    code: string;
+    nickname: string;
+    admissionDate: Date;
+    capitalCity: string;
+    capitalUrl: string;
+    population: number;
+    stateFlagUrl: string;
+    stateSealUrl: string;
+    mapIamgeUrl: string;
+    websiteUrl: string;
+    areaMile: number;
+    areaKm: number;
+}

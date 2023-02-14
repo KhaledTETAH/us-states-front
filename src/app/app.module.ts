@@ -7,12 +7,16 @@ import { DxCheckBoxModule, DxDataGridModule, DxFileManagerModule } from 'devextr
 import { NavbarComponent } from './navbar/navbar.component';
 import { CityDatagridComponent } from './city-datagrid/city-datagrid.component';
 import { HttpClientModule } from '@angular/common/http';
+import { StateCardComponent } from './state-card/state-card.component';
+import { StatesHomeComponent } from './states-home/states-home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
-    CityDatagridComponent
+    CityDatagridComponent,
+    StateCardComponent,
+    StatesHomeComponent
   ],
   imports: [
     BrowserModule,

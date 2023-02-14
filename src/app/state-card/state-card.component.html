@@ -1,0 +1,28 @@
+<div class="card" style="width: 18rem;">
+  <div [id]="'carousel-'+carouselId" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img [src]="flagImageUrl" class="d-block w-100" [alt]="">
+      </div>
+      <div class="carousel-item">
+        <img [src]="sealImageUrl" class="d-block w-100" [alt]="">
+      </div>
+      <div class="carousel-item">
+        <img [src]="mapImageUrl" class="d-block w-100" [alt]="">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" [attr.data-bs-target]="'#carousel-'+carouselId" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" [attr.data-bs-target]="'#carousel-'+carouselId" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">{{cardTitle}}</h5>
+    <p class="card-text">{{cardText}}</p>
+    <button  class="btn btn-primary" type="button" (click)="goToDetails($event)">{{goToText}}</button>
+  </div>
+</div>

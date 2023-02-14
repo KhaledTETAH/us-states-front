@@ -1,5 +1,5 @@
 import { CityDatagridService } from './city-datagrid.service';
-import { City } from './../model';
+import { City } from '../model';
 import { Component, OnInit } from '@angular/core';
 
 
