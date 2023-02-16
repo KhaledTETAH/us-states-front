@@ -1,6 +1,8 @@
+import { Router } from '@angular/router';
+import { StatesHomeService } from './../states-home/states-home.service';
 import { HttpClient } from '@angular/common/http';
-import { Component, Input, OnInit } from '@angular/core';
-import { State } from '../model';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { State } from '../models/model';
 
 @Component({
   selector: 'app-state-card',
@@ -9,40 +11,13 @@ import { State } from '../model';
 })
 export class StateCardComponent {
 
-  state: State;
+  @Input() state: State;
 
-  @Input() flagImageUrl: string;
-  @Input() sealImageUrl: string;
-  @Input() mapImageUrl: string;
-  @Input() imageAlt: string;
-  @Input() cardTitle: string;
-  @Input() cardText: string;
-  @Input() goToUrl: string;
-  @Input() goToText: string;
-  @Input() carouselId: string;
-  @Input() selectedItem: State;
+  constructor(private service: StatesHomeService, private router: Router){
 
-  constructor(/* private http: HttpClient */){
-
-/*     this.http.get<State>('http://localhost:8080/api/states/id/1').subscribe(data => {
-      this.state = data;
-      console.log(this.state);
-      this.flagImageUrl = this.state.stateFlagUrl;
-      this.sealImageUrl = this.state.stateSealUrl;
-      this.mapImageUrl = this.state.mapIamgeUrl;
-      this.imageAlt = this.state.name;
-      this.cardTitle = this.state.name;
-      this.cardText = this.state.nickname+', '+this.state.code;
-
-    });
-    
-    
-    this.goToUrl = "https://www.google.com/";
-    this.goToText = 'Show Details'; */
-  }
-  
-  goToDetails(e){
-    console.log(e);
   }
 
+  onSelected(){
+    this.router.navigateByUrl('/state/'+this.state.admissionNumber);
+  }
 }

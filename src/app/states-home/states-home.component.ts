@@ -1,7 +1,8 @@
 import { StatesHomeService } from './states-home.service';
 
-import { Component, OnInit } from '@angular/core';
-import { State } from '../model';
+import { Component, OnInit, AfterViewInit } from '@angular/core';
+import { State } from '../models/model';
+import { state } from '@angular/animations';
 
 const URL = 'http://localhost:8080/api/states';
 
@@ -10,18 +11,23 @@ const URL = 'http://localhost:8080/api/states';
   templateUrl: './states-home.component.html',
   styleUrls: ['./states-home.component.scss']
 })
-export class StatesHomeComponent implements OnInit {
+export class StatesHomeComponent implements OnInit, AfterViewInit {
   states: State[];
-  selectedItem: State;
+  selectedState: State;
 
   constructor(private service: StatesHomeService){}
+
 
   ngOnInit(){
     this.handleLoadStates();
   }
 
-  showDetails(state: State){
-    this.selectedItem = state;
+  onStateSelected(state: State){
+
+  }
+
+  ngAfterViewInit(): void {
+
   }
 
   handleLoadStates(){

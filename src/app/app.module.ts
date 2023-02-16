@@ -9,6 +9,7 @@ import { CityDatagridComponent } from './city-datagrid/city-datagrid.component';
 import { HttpClientModule } from '@angular/common/http';
 import { StateCardComponent } from './state-card/state-card.component';
 import { StatesHomeComponent } from './states-home/states-home.component';
+import { FormatNumberPipe, StateDetailsComponent } from './state-details/state-details.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,9 @@ import { StatesHomeComponent } from './states-home/states-home.component';
     NavbarComponent,
     CityDatagridComponent,
     StateCardComponent,
-    StatesHomeComponent
+    StatesHomeComponent,
+    StateDetailsComponent,
+    FormatNumberPipe
   ],
   imports: [
     BrowserModule,
