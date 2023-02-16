@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { City } from '../model';
+import { City } from '../models/model';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 

@@ -1,14 +1,7 @@
 <div class="container">
     <div class="card-container" *ngFor="let state of states">
-        <app-state-card [flagImageUrl]="state.stateFlagUrl"
-                        [sealImageUrl]="state.stateSealUrl"
-                        [mapImageUrl]="state.mapIamgeUrl"
-                        [imageAlt]="state.name"
-                        [cardTitle]="state.name"
-                        [cardText]="state.nickname"
-                        [goToText]="'More details'"
-                        [carouselId]="state.code"
-                        [selectedItem]="selectedItem">
+        <app-state-card 
+                        [state]="state">
         </app-state-card>
     </div>
 </div>
